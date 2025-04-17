@@ -1,6 +1,7 @@
 from django.urls import path
-from home.views import inicio  # Importa la vista 'inicio' de la app 'home'
+from home.views import inicio, crear_registro  # Importa las vistas de la app 'home'
 
 urlpatterns = [
-    path('', inicio, name='inicio'),  # URL para la vista de inicio
+    path('', inicio, name='inicio'),
+    path('registros/crear', crear_registro, name="crear_registro"),
 ]
