@@ -8,8 +8,14 @@
 <body>
     <nav>        
         <a href="{% url 'inicio' %}">Inicio</a>
-        <a href="{% url 'crear_registro' %}">Crear Registro</a>
+        <a href="{% url 'crear_registro' %}">Registrar Cliente</a>
     </nav>
-    <h1>Crear Nuevo Registro</h1>
+    <h1>Registrar Nuevo Cliente</h1>
+    <form action="{% url 'crear_registro' %}" method="post">
+        {% csrf_token %}
+    
+        {{formulario}}
+        
+        <input type="submit" value="Registrar">
 </body>
 </html>
