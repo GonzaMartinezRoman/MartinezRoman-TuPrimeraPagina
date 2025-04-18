@@ -11,11 +11,18 @@
         <a href="{% url 'crear_registro' %}">Registrar Cliente</a>
         <a href="{% url 'listado_de_clientes' %}">Listado de Clientes</a>
     </nav>
-    <h1>Bienvenido!</h1>
-    <h2>Esta es la web de gestión de clientes de Gimnasios Training-Center</h2>
-    <p>Utiliza la navegación para hallar la función que estás buscando.</p>
+    <h1>Listado de Clientes</h1>
+    {% if clientes %}
+    <ul>
+        {% for cliente in clientes  %}
+        <li>
+            {{cliente}}
+        </li>
+        {% endfor %}
+    </ul>    
+    {% else %}
+    <p>No hay clientes registrados.</p>
+    {% endif %}    
 </body>
 </html>
-
-
 

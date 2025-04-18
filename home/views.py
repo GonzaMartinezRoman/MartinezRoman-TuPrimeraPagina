@@ -18,8 +18,12 @@ def crear_registro(request):
             cliente.save()
             
             # Después de guardar el cliente me voy a Inicio.
-            return redirect('inicio')
+            return redirect('listado_de_clientes')
     else:
         formulario = RegistrarCliente()
 
     return render(request, 'home/crear_registro.html', {'formulario':formulario})
+
+def listado_de_clientes(request):
+    clientes = Cliente.objects.all()
+    return render(request, 'home/listado_de_clientes.html', {'clientes':clientes})
