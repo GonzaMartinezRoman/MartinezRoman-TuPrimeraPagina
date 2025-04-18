@@ -1,8 +1,14 @@
 # 69535_Python
-Repositorio curso coderhouse Python
+# **Tu primera página**
+
+**Web de gestion de clientes de la red de gimnasios ficticia "Training-Center"**
+
+Descripción: La paǵina contiene una vista de Inicio, "Inicio" con un mensaje de bienvenida y una vista "Registrar Cliente" a través de la cual se carga la información de un nuevo cliente y se almacena en la base de datos.
+
+
 
 Consigna
-
+-
 Crea una web en Django utilizando Herencia de plantillas, con un modelo de por lo menos 3 clases, un formulario para ingresar datos a las 3 clases y un formulario para buscar algo en la BD, no hace falta que sea sobre las tres clases, con realizar búsqueda sobre una alcanzará.
 Te sugerimos que hagas  una web estilo blog para ir preparando en la entrega final.
 
