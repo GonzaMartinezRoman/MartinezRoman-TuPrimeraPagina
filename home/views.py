@@ -1,6 +1,7 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, redirect
+#from django.http import HttpResponse
 from home.forms import RegistrarCliente
+from home.models import Cliente
 
 # Create your views here.
 
@@ -11,6 +12,13 @@ def crear_registro(request):
 
     if request.method == 'POST':
         formulario = RegistrarCliente(request.POST)
+        if formulario.is_valid():
+            info = formulario.cleaned_data
+            cliente = Cliente(nombre=info['nombre'], apellido=info['apellido'], email=info['email'], edad=info['edad'], sede_inscripcion=info['sede_inscripcion'])
+            cliente.save()
+            
+            # Después de guardar el cliente me voy a Inicio.
+            return redirect('inicio')
     else:
         formulario = RegistrarCliente()
 
