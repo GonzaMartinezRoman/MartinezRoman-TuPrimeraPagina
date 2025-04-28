@@ -14,7 +14,7 @@ def crear_registro(request):
         formulario = RegistrarCliente(request.POST)
         if formulario.is_valid():
             info = formulario.cleaned_data
-            cliente = Cliente(nombre=info['nombre'], apellido=info['apellido'], email=info['email'], edad=info['edad'], sede_inscripcion=info['sede_inscripcion'])
+            cliente = Cliente(nombre=info['nombre'], apellido=info['apellido'], email=info['email'], edad=info['edad'], fecha_de_nacimiento=info['fecha_de_nacimiento'], sede_inscripcion=info['sede_inscripcion'])
             cliente.save()
             
             # Después de guardar el cliente me voy a Inicio.

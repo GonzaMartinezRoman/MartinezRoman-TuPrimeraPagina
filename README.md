@@ -5,7 +5,7 @@
 
 Descripción: La paǵina contiene una vista de Inicio, "Inicio" con un mensaje de bienvenida, una vista "Registrar Cliente" a través de la cual se carga la información de un nuevo cliente y se almacena en la base de datos y una vista "Lista de Clientes" donde pueden verse todos los clientes registrados en la base de datos.
 
-
+Admin: gonzalomartinezroman / @$1234
 
 Consigna
 -
