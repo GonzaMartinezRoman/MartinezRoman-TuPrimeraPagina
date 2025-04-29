@@ -7,6 +7,9 @@ Descripción: La paǵina contiene una vista de Inicio, "Inicio" con un mensaje d
 
 Admin: gonzalomartinezroman / @$1234
 
+-----> quedé en la grabación Clase práctica Playgorund Avanzado 14 de abril, 1.:29:14 hs
+
+
 Consigna
 -
 Crea una web en Django utilizando Herencia de plantillas, con un modelo de por lo menos 3 clases, un formulario para ingresar datos a las 3 clases y un formulario para buscar algo en la BD, no hace falta que sea sobre las tres clases, con realizar búsqueda sobre una alcanzará.
