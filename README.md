@@ -7,7 +7,7 @@ Descripción: La paǵina contiene una vista de Inicio, "Inicio" con un mensaje d
 
 Admin: gonzalomartinezroman / @$1234
 
------> quedé en la grabación Clase práctica Playgorund Avanzado 14 de abril, 1.:29:14 hs
+-----> quedé en la grabación Clase práctica Playground Avanzado 14 de abril, 1.:51:45 hs
 
 
 Consigna
