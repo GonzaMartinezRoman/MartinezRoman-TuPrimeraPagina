@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 #from django.http import HttpResponse
 from home.forms import RegistrarCliente
 from home.models import Cliente
+from django.views.generic import DetailView
 
 # Create your views here.
 
@@ -27,3 +28,10 @@ def crear_registro(request):
 def listado_de_clientes(request):
     clientes = Cliente.objects.all()
     return render(request, 'home/listado_de_clientes.html', {'clientes':clientes})
+
+# Clases basadas en vista
+class FichaCliente(DetailView):
+    model = Cliente
+    template_name = 'home/detalles_registro.html'
+    context_object_name = 'cliente'  # Nombre del contexto que se pasará a la plantilla
+    # Puedes agregar más configuraciones aquí si es necesario

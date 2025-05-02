@@ -11,18 +11,12 @@
         <a href="{% url 'crear_registro' %}">Registrar Cliente</a>
         <a href="{% url 'listado_de_clientes' %}">Listado de Clientes</a>
     </nav>
-    <h1>Listado de Clientes</h1>
-    {% if clientes %}
-    <ul>
-        {% for cliente in clientes  %}
-        <li>
-            {{cliente}} | <a href="{% url 'detalles_registro' cliente.id %}">Ver Ficha</a>
-        </li>
-        {% endfor %}
-    </ul>    
-    {% else %}
-    <p>No hay clientes registrados.</p>
-    {% endif %}    
+    <h1>Ficha de Cliente</h1>
+    <p>Nombre: {{cliente.nombre}}</p>
+    <p>Apellido: {{cliente.apellido}}</p>
+    <p>Fecha de nacimiento: {{cliente.fecha_de_nacimiento}}</p>
+    <p>Edad: {{cliente.edad}}</p>
+    <p>Sede de inscripción: {{cliente.sede_inscripcion}}</p>
+    <p>Email: {{cliente.email}}</p>
 </body>
 </html>
-
