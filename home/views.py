@@ -9,7 +9,7 @@ from django.views.generic import DetailView
 def inicio(request):
     return render(request, 'home/inicio.html')
 
-def crear_registro(request):
+def crear_cliente(request):
 
     if request.method == 'POST':
         formulario = RegistrarCliente(request.POST)
@@ -23,7 +23,7 @@ def crear_registro(request):
     else:
         formulario = RegistrarCliente()
 
-    return render(request, 'home/crear_registro.html', {'formulario':formulario})
+    return render(request, 'home/crear_cliente.html', {'formulario':formulario})
 
 def listado_de_clientes(request):
     clientes = Cliente.objects.all()
@@ -32,6 +32,6 @@ def listado_de_clientes(request):
 # Clases basadas en vista
 class FichaCliente(DetailView):
     model = Cliente
-    template_name = 'home/detalles_registro.html'
-    context_object_name = 'cliente'  # Nombre del contexto que se pasará a la plantilla
-    # Puedes agregar más configuraciones aquí si es necesario
+    template_name = 'home/detalles_cliente.html'
+    # context_object_name = 'cliente'  # Nombre del contexto que se pasará a la plantilla
+    # # Puedes agregar más configuraciones aquí si es necesario
