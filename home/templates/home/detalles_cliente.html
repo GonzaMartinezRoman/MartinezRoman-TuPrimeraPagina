@@ -1,22 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <nav>        
-        <a href="{% url 'inicio' %}">Inicio</a>
-        <a href="{% url 'crear_cliente' %}">Registrar Cliente</a>
-        <a href="{% url 'listado_de_clientes' %}">Listado de Clientes</a>
-    </nav>
-    <h1>{{cliente}}</h1>
-    <p>Nombre: {{cliente.nombre}}</p>
-    <p>Apellido: {{cliente.apellido}}</p>
-    <p>Fecha de nacimiento: {{cliente.fecha_de_nacimiento}}</p>
-    <p>Edad: {{cliente.edad}}</p>
-    <p>Sede de inscripción: {{cliente.sede_inscripcion}}</p>
-    <p>Email: {{cliente.email}}</p>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Ficha de {{ cliente }}{% endblock %}
+
+{% block contenido %}
+<div class="card">
+    <div class="card-header">
+        <h1 class="h4 mb-0">{{ cliente }}</h1>
+    </div>
+    <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <strong>Nombre:</strong> {{ cliente.nombre }}
+            </li>
+            <li class="list-group-item">
+                <strong>Apellido:</strong> {{ cliente.apellido }}
+            </li>
+            <li class="list-group-item">
+                <strong>Fecha de nacimiento:</strong> {{ cliente.fecha_de_nacimiento }}
+            </li>
+            <li class="list-group-item">
+                <strong>Edad:</strong> {{ cliente.edad }}
+            </li>
+            <li class="list-group-item">
+                <strong>Sede de inscripción:</strong> {{ cliente.sede_inscripcion }}
+            </li>
+            <li class="list-group-item">
+                <strong>Email:</strong> {{ cliente.email }}
+            </li>
+        </ul>
+        <div class="mt-3">
+            <a href="{% url 'modificar_cliente' cliente.id %}" class="btn btn-warning">Modificar</a>
+            <a href="{% url 'eliminar_cliente' cliente.id %}" class="btn btn-danger">Eliminar</a>
+            <a href="{% url 'listado_de_clientes' %}" class="btn btn-secondary">Volver al Listado</a>
+        </div>
+    </div>
+</div>
+{% endblock contenido %}

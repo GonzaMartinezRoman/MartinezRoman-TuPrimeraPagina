@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <nav>        
-        <a href="{% url 'inicio' %}">Inicio</a>
-        <a href="{% url 'crear_cliente' %}">Registrar Cliente</a>
-        <a href="{% url 'listado_de_clientes' %}">Listado de Clientes</a>
-    </nav>
-    <h1>Eliminar: {{cliente}}</h1>
-    <form action="{% url 'eliminar_cliente' cliente.id %}" method="post">
-        {% csrf_token %}
-    
-       <p>¿Está seguro de que desea eliminar al cliente?</p>
-        
-        <input type="submit" value="Eliminar">
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Eliminar Cliente{% endblock %}
+
+{% block contenido %}
+<div class="card border-danger">
+    <div class="card-header bg-danger text-white">
+        <h1 class="h4 mb-0">Eliminar: {{ cliente }}</h1>
+    </div>
+    <div class="card-body">
+        <p class="mb-3">¿Está seguro de que desea eliminar al cliente?</p>
+        <form action="{% url 'eliminar_cliente' cliente.id %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            <a href="{% url 'listado_de_clientes' %}" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</div>
+{% endblock contenido %}
+

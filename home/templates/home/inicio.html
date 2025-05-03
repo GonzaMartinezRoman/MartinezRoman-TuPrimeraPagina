@@ -1,21 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <nav>        
-        <a href="{% url 'inicio' %}">Inicio</a>
-        <a href="{% url 'crear_cliente' %}">Registrar Cliente</a>
-        <a href="{% url 'listado_de_clientes' %}">Listado de Clientes</a>
-    </nav>
-    <h1>Bienvenido!</h1>
-    <h2>Esta es la web de gestión de clientes de Gimnasios Training-Center</h2>
-    <p>Utiliza la navegación para hallar la función que estás buscando.</p>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block contenido %}
+<div class="jumbotron bg-light p-5 rounded">
+    <h1 class="display-4">¡Bienvenido!</h1>
+    <h2 class="h5 mt-3">Esta es la web de gestión de clientes de <strong>Gimnasios Training-Center</strong></h2>
+    <p class="lead mt-3">Utiliza la navegación para hallar la función que estás buscando.</p>
+    <hr class="my-4">
+    <a class="btn btn-primary btn-lg" href="{% url 'listado_de_clientes' %}" role="button">Ver Listado de Clientes</a>
+    <a class="btn btn-success btn-lg" href="{% url 'crear_cliente' %}" role="button">Registrar Nuevo Cliente</a>
+</div>
+{% endblock contenido %}
+
+
 
 
 
