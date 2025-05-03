@@ -3,32 +3,57 @@
 
 **Web de gestion de clientes de la red de gimnasios ficticia "Training-Center"**
 
-Descripción: La paǵina contiene una vista de Inicio, "Inicio" con un mensaje de bienvenida, una vista "Registrar Cliente" a través de la cual se carga la información de un nuevo cliente y se almacena en la base de datos y una vista "Lista de Clientes" donde pueden verse todos los clientes registrados en la base de datos.
+Objeto: Constituye la base de datos de clientes del gimnasio, a la cual puede acceder el personal administrativo, con un Usuario y Contraseñas personales, para registrar nuevos clientes, visualizar la ficha de un cliente y modificar o eliminar clientes. 
+
+Descripción: 
+- La paǵina contiene una vista de Inicio, "Inicio" con un mensaje de bienvenida, 
+- Una vista "Registrar Cliente" a través de la cual se carga la información de un nuevo cliente y se almacena en la base de datos, 
+- Una vista "Lista de Clientes" donde pueden verse todos los clientes registrados en la base de datos, acceder a la ficha de cada cliente (vista de detalle) y modificar o elilimar un determinado cliente.
 
 Admin: gonzalomartinezroman / @$1234
 
------> quedé en la grabación Clase práctica Playground Avanzado 14 de abril, 1.:51:45 hs
+---
+# Puntos para la entrega final
 
+- [ ] Entrega individual
+- [ ] subir a github
+- [ ] readme como la entrega 3
+- [ ] video de maximo 10 min que muestre la pagina y sus funcionalidades (con o sin audio)
+  - programas que pueden utilizar freecam8, obs, filmora 12, etc.
+- [ ] No agregar la Base de datos (el archivo db.sqlite3) en la entrega. Deberia estar en el .gitignore
+- [ ] Uso de herencia de templates
+- [ ] Exista gitignore con:
+```
 
-Consigna
--
-Crea una web en Django utilizando Herencia de plantillas, con un modelo de por lo menos 3 clases, un formulario para ingresar datos a las 3 clases y un formulario para buscar algo en la BD, no hace falta que sea sobre las tres clases, con realizar búsqueda sobre una alcanzará.
-Te sugerimos que hagas  una web estilo blog para ir preparando en la entrega final.
+<carpeta del entorno virtual>
+__pycache__
+db.sqlite3
+media
+```
 
-Objetivos
+Estos ultimos son por el hecho de no compartir la info de tu bd y, aparte, las imagenes son archivos muy pesados que no es recomendable tenerlos en el repo. En cambio, las imagenes que sean parte del codigo del proyecto deberian guardarse en la carpeta static.
 
-    • Desarrollar tu primer WEB en Django utilizando patrón MVT
-Requisitos
-
-    • Link de GitHub con el proyecto totalmente subido a la plataforma.
-
-    • Proyecto Web Django con patrón MVT que incluya: 
-        ◦ Herencia de HTML.
-        ◦ Por lo menos 3 clases en models.
-        ◦ Un formulario para insertar datos a por cada model creado..
-        ◦ Un formulario para buscar algo en la BD
-        ◦ Readme que indique el orden en el que se prueban las cosas y/o donde están las funcionalidades.
-
-Formato
-
-Link al repositorio de GitHub con el nombre “TuPrimeraPagina+Apellido”  por ejemplo “TuPrimeraPagina+Fernandez”
+- [ ] Existencia del archivo requirements.txt actualizado.
+- [ ] Tener en cuenta al manejar forms con imagenes hay que adaptar el template, y la vista...no solo el modelo y el formulario.
+- [ ] Uso de minimo 2 clases basadas en vista.
+- [ ] Uso de minimo un mixin en una CBV y un decorador en una view comun.
+- [ ] Hacer uso de Estaticos (carpeta static con la carga de templates desde bootstrap)
+- [ ] Una vista de inicio
+- [ ] Acceso a una vista "Acerca de mi"/"About"
+- [ ] Crear un modelo principal que contenga los siguiente campos como minimo: 3 Charfield  (o 2 Charfield y un Integerfield), 1 campo de imagen, 1 de fecha
+- [ ] Vista de listado de los objetos del modelo principal (modelo a eleccion). En la cual cada objeto mostrara solo alguno de sus datos
+- [ ] Mensaje que de aviso en caso de no haber ningun objeto creado o al utilizar el buscador no encontrar tampoco algun objeto
+- [ ] Desde el listado:
+    1. poder acceder a una vista que muestre el detalle de el objeto seleccionado
+    2. poder acceder a una vista de creacion, una de edicion y una de borrado de los objetos del listado
+- [ ] [va por su cuenta] Acomodar el modelo para que maneje un campo de imagen y todas las pantallas relacionadas al modelo lo tengan en cuenta a este nuevo campo.
+- [ ] Registrar en el apartado de admin todos los modelos creados
+- [ ] Tener una app para el manejo de todas las vistas relacionadas al usuario/autenticacion
+- [ ] Desarrollar las vistas para un login, un logout y el registro de un usuario al cual se le solicite: username, email, password
+- [ ] [va por su cuenta] Crear una vista de perfil donde se muestren los datos del usuario:
+  - nombre
+  - apellido
+  - email
+  - avatar
+  - [va por su cuenta] Campo a eleccion (biografia, fecha de nacimiento, gustos, hobbies, etc)
+- [ ] Desde el perfil, crear un acceso a una vista de edicion de estos datos.

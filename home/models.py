@@ -5,7 +5,7 @@ class Cliente(models.Model):
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
     email = models.EmailField()
-    edad = models.CharField(max_length=3)
+    edad = models.IntegerField(max_length=3)
     fecha_de_nacimiento = models.DateField(null=True)
     sede_inscripcion = models.CharField(max_length=100)
 
