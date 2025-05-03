@@ -10,7 +10,7 @@ class Cliente(models.Model):
     sede_inscripcion = models.CharField(max_length=100)
 
     def __str__(self):
-        return f'Nombre: {self.nombre},  Apellido: {self.apellido}'
+        return f'{self.apellido}, {self.nombre}'
     
     # def __str__(self):
     #     return f'Nombre: {self.nombre},  Apellido: {self.apellido}, Email:  {self.email}, Edad: {self.edad}, Fecha de nacimiento: {self.fecha_de_nacimiento}, Inscripto en sede: {self.sede_inscripcion}'

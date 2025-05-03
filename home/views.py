@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 #from django.http import HttpResponse
 from home.forms import RegistrarCliente
 from home.models import Cliente
-from django.views.generic import DetailView
+from django.views.generic import DetailView, UpdateView
+from django.urls import reverse_lazy
 
 # Create your views here.
 
@@ -33,5 +34,9 @@ def listado_de_clientes(request):
 class FichaCliente(DetailView):
     model = Cliente
     template_name = 'home/detalles_cliente.html'
-    # context_object_name = 'cliente'  # Nombre del contexto que se pasará a la plantilla
-    # # Puedes agregar más configuraciones aquí si es necesario
+
+class ModificarCliente(UpdateView):
+    model = Cliente
+    template_name = 'home/modificar_cliente.html'
+    fields = ['nombre', 'apellido', 'email', 'edad', 'fecha_de_nacimiento', 'sede_inscripcion']
+    success_url = reverse_lazy('listado_de_clientes')

@@ -11,12 +11,12 @@
         <a href="{% url 'crear_cliente' %}">Registrar Cliente</a>
         <a href="{% url 'listado_de_clientes' %}">Listado de Clientes</a>
     </nav>
-    <h1>{{cliente}}</h1>
-    <p>Nombre: {{cliente.nombre}}</p>
-    <p>Apellido: {{cliente.apellido}}</p>
-    <p>Fecha de nacimiento: {{cliente.fecha_de_nacimiento}}</p>
-    <p>Edad: {{cliente.edad}}</p>
-    <p>Sede de inscripción: {{cliente.sede_inscripcion}}</p>
-    <p>Email: {{cliente.email}}</p>
+    <h1>Modificar {{cliente}}</h1>
+    <form action="{% url 'modificar_cliente' cliente.id %}" method="post">
+        {% csrf_token %}
+    
+        {{form}}
+        
+        <input type="submit" value="Modificar">
 </body>
 </html>

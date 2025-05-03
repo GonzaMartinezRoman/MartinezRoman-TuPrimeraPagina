@@ -16,7 +16,9 @@
     <ul>
         {% for cliente in clientes  %}
         <li>
-            {{cliente}} | <a href="{% url 'detalles_cliente' cliente.id %}">Ver Ficha</a>
+            {{cliente}} 
+            | <a href="{% url 'detalles_cliente' cliente.id %}">Ver Ficha</a> 
+            | <a href="{% url 'modificar_cliente' cliente.id %}">Modificar</a>
         </li>
         {% endfor %}
     </ul>    
