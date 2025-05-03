@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 #from django.http import HttpResponse
 from home.forms import RegistrarCliente
 from home.models import Cliente
-from django.views.generic import DetailView, UpdateView
+from django.views.generic import DetailView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
 # Create your views here.
@@ -39,4 +39,9 @@ class ModificarCliente(UpdateView):
     model = Cliente
     template_name = 'home/modificar_cliente.html'
     fields = ['nombre', 'apellido', 'email', 'edad', 'fecha_de_nacimiento', 'sede_inscripcion']
+    success_url = reverse_lazy('listado_de_clientes')
+
+class EliminarCliente(DeleteView):
+    model = Cliente
+    template_name = 'home/eliminar_cliente.html'
     success_url = reverse_lazy('listado_de_clientes')

@@ -19,6 +19,7 @@
             {{cliente}} 
             | <a href="{% url 'detalles_cliente' cliente.id %}">Ver Ficha</a> 
             | <a href="{% url 'modificar_cliente' cliente.id %}">Modificar</a>
+            | <a href="{% url 'eliminar_cliente' cliente.id %}">Eliminar</a>
         </li>
         {% endfor %}
     </ul>    
