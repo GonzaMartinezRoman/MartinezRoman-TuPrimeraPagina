@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card text-center">
+            <div class="card-header bg-success text-white">
+                Sesión Cerrada
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">¡Has cerrado sesión correctamente!</h5>
+                <p class="card-text">Puedes volver a iniciar sesión cuando lo desees.</p>
+                <a href="{% url 'inicio' %}" class="btn btn-primary">Inicio</a>
+                <a href="{% url 'login' %}" class="btn btn-outline-secondary ms-2">Acceder</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock contenido %}

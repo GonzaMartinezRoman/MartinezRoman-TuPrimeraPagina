@@ -6,8 +6,10 @@
 <div class="jumbotron bg-light p-5 rounded">
     <h1 class="display-4">¡Bienvenido!</h1>
     <h2 class="h5 mt-3">Esta es la web de gestión de clientes de <strong>Gimnasios Training-Center</strong></h2>
+    <p class="lead mt-3">Ingresa con tu Usuario y Contraseña para registrar, modificar o eliminar un cliente</p>
     <p class="lead mt-3">Utiliza la navegación para hallar la función que estás buscando.</p>
     <hr class="my-4">
+    <a class="btn btn-secondary btn-lg" href="{% url 'login' %}" role="button">Acceder</a>
     <a class="btn btn-primary btn-lg" href="{% url 'listado_de_clientes' %}" role="button">Ver Listado de Clientes</a>
     <a class="btn btn-success btn-lg" href="{% url 'crear_cliente' %}" role="button">Registrar Nuevo Cliente</a>
 </div>
