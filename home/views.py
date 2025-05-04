@@ -10,6 +10,9 @@ from django.urls import reverse_lazy
 def inicio(request):
     return render(request, 'home/inicio.html')
 
+def acerca_de_mi(request):
+    return render(request, 'home/acerca_de_mi.html')
+
 def crear_cliente(request):
 
     if request.method == 'POST':
