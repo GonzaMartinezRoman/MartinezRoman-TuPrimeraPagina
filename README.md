@@ -11,6 +11,7 @@ Descripción:
 - Una vista "Lista de Clientes" donde pueden verse todos los clientes registrados en la base de datos, acceder a la ficha de cada cliente (vista de detalle) y modificar o elilimar un determinado cliente.
 
 Admin: gonzalomartinezroman / @$1234
+usuario: usuario_de_prueba_1 / @$123456
 
 ---
 # Puntos para la entrega final
