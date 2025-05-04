@@ -11,8 +11,9 @@ Descripción:
 - Una vista "Lista de Clientes" donde pueden verse todos los clientes registrados en la base de datos, acceder a la ficha de cada cliente (vista de detalle) y modificar o elilimar un determinado cliente.
 
 Admin: gonzalomartinezroman / @$1234
-usuario: usuario_de_prueba_1 / @$123456
-
+usuarios: 
+usuario_de_prueba_1 / @$123456
+Gonza / @$GMR1986
 ---
 # Puntos para la entrega final
 
@@ -48,8 +49,8 @@ Estos ultimos son por el hecho de no compartir la info de tu bd y, aparte, las i
     2. poder acceder a una vista de creacion, una de edicion y una de borrado de los objetos del listado
 - [ ] [va por su cuenta] Acomodar el modelo para que maneje un campo de imagen y todas las pantallas relacionadas al modelo lo tengan en cuenta a este nuevo campo.
 - [x] Registrar en el apartado de admin todos los modelos creados
-- [ ] Tener una app para el manejo de todas las vistas relacionadas al usuario/autenticacion
-- [ ] Desarrollar las vistas para un login, un logout y el registro de un usuario al cual se le solicite: username, email, password
+- [x] Tener una app para el manejo de todas las vistas relacionadas al usuario/autenticacion
+- [x] Desarrollar las vistas para un login, un logout y el registro de un usuario al cual se le solicite: username, email, password
 - [ ] [va por su cuenta] Crear una vista de perfil donde se muestren los datos del usuario:
   - nombre
   - apellido
