@@ -30,7 +30,7 @@
                 <ul class="navbar-nav ms-auto">
                     {% if request.user.is_authenticated %}
                     <li class="nav-item d-flex align-items-center me-2">
-                        <span class="nav-link text-warning fw-bold">{{ request.user.username }}</span>
+                        <a class="nav-link text-warning fw-bold" href="{% url 'editar_perfil' %}">{{ request.user.username }}</a>
                     </li>
                         <li class="nav-item d-flex align-items-center">
                             <form method="post" action="{% url 'logout' %}">

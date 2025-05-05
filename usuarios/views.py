@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm, UserChangeForm
 from django.contrib.auth import login
-from usuarios.forms import FormularioRegistro
+from usuarios.forms import FormularioRegistro, FormularioEdicionPerfil
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def login_usuarios(request):
@@ -33,3 +34,17 @@ def registro_usuarios(request):
         formulario = FormularioRegistro()
 
     return render(request, 'usuarios/registro.html', {'formulario':formulario})
+
+@login_required
+def editar_perfil(request):
+    if request.method == 'POST':
+        formulario = FormularioEdicionPerfil(request.POST, instance=request.user)
+        if formulario.is_valid():
+            
+            formulario.save()
+            
+            return redirect('inicio')
+    else:
+        formulario = FormularioEdicionPerfil(instance=request.user)
+
+    return render(request, 'usuarios/editar_perfil.html', {'formulario':formulario})
