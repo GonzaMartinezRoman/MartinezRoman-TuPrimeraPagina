@@ -14,6 +14,8 @@ Admin: gonzalomartinezroman / @$1234
 usuarios: 
 usuario_de_prueba_1 / @$123456
 Gonza / @$GMR1986
+
+quedé en ultima clase 2:53:05
 ---
 # Puntos para la entrega final
 
@@ -37,7 +39,7 @@ Estos ultimos son por el hecho de no compartir la info de tu bd y, aparte, las i
 - [ ] Existencia del archivo requirements.txt actualizado.
 - [ ] Tener en cuenta al manejar forms con imagenes hay que adaptar el template, y la vista...no solo el modelo y el formulario.
 - [x] Uso de minimo 2 clases basadas en vista.
-- [ ] Uso de minimo un mixin en una CBV y un decorador en una view comun.
+- [x] Uso de minimo un mixin en una CBV y un decorador en una view comun.
 - [ ] Hacer uso de Estaticos (carpeta static con la carga de templates desde bootstrap)
 - [x] Una vista de inicio
 - [x] Acceso a una vista "Acerca de mi"/"About"
