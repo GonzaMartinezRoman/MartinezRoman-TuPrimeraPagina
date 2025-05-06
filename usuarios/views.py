@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import AuthenticationForm, UserChangeForm
+from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login
 from usuarios.forms import FormularioRegistro, FormularioEdicionPerfil
 from django.contrib.auth.decorators import login_required
