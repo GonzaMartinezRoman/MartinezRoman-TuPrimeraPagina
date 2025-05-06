@@ -6,12 +6,23 @@
         <h1 class="h4 mb-0">Editar Perfil</h1>
     </div>
     <div class="card-body">
-        <form action="{% url 'editar_perfil' %}" method="post">
+        <form action="{% url 'editar_perfil' %}" method="post" enctype="multipart/form-data">
+            {% if mensaje %}
+                <div class="alert alert-success" role="alert">
+                    {{ mensaje }}
+                </div>
+            {% endif %}
+            
+            {% if error %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endif %}
             {% csrf_token %}
             
             {{formulario}}
 
-            <button type="submit" class="btn btn-primary">Actualizar</button>
+            <button type="submit" class="btn btn-primary mt-3">Actualizar</button>
         </form>
     </div>
 </div>

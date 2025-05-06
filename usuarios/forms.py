@@ -25,12 +25,16 @@ class FormularioEdicionPerfil(UserChangeForm):
     username = forms.CharField(label='Nombre de usuario', max_length=150, required=True)
     first_name = forms.CharField(label='Nombre', max_length=30, required=False)
     last_name = forms.CharField(label='Apellido', max_length=150, required=False)
+    fecha_nacimiento = forms.DateField(label='Fecha de nacimiento', required=False, widget=forms.DateInput(attrs={'type': 'date'}))
+    avatar = forms.ImageField(label='Avatar', required=False, widget=forms.ClearableFileInput(attrs={'accept': 'image/*'}))
     class Meta:
         model = User
-        fields = ['username', 'email', 'first_name', 'last_name']
+        fields = ['username', 'email', 'first_name', 'last_name', 'fecha_nacimiento', 'avatar']
         widgets = {
             'username': forms.TextInput(attrs={'placeholder': 'Nombre de usuario'}),
             'email': forms.EmailInput(attrs={'placeholder': 'Correo electrónico'}),
             'first_name': forms.TextInput(attrs={'placeholder': 'Nombre'}),
             'last_name': forms.TextInput(attrs={'placeholder': 'Apellido'}),
+            'fecha_nacimiento': forms.DateInput(attrs={'placeholder': 'Fecha de nacimiento', 'type': 'date'}),
+            'avatar': forms.ClearableFileInput(attrs={'accept': 'image/*'}),
         }

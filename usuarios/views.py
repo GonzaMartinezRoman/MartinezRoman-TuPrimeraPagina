@@ -3,6 +3,7 @@ from django.contrib.auth.forms import AuthenticationForm, UserChangeForm
 from django.contrib.auth import login
 from usuarios.forms import FormularioRegistro, FormularioEdicionPerfil
 from django.contrib.auth.decorators import login_required
+from usuarios.models import Usuario
 
 # Create your views here.
 def login_usuarios(request):
@@ -14,6 +15,8 @@ def login_usuarios(request):
             usuario = formulario.get_user()
 
             login(request, usuario)
+
+            Usuario.objects.get_or_create(user=usuario)  # Crea un objeto Usuario si no existe
             
             return redirect('inicio')
     else:
@@ -37,14 +40,23 @@ def registro_usuarios(request):
 
 @login_required
 def editar_perfil(request):
+    
+    usuario, created = Usuario.objects.get_or_create(user=request.user)
+    
     if request.method == 'POST':
-        formulario = FormularioEdicionPerfil(request.POST, instance=request.user)
+        formulario = FormularioEdicionPerfil(request.POST, request.FILES, instance=request.user)
         if formulario.is_valid():
+
+            if formulario.cleaned_data.get('avatar'):
+                # Si se subió un nuevo avatar, lo guardamos
+                usuario.avatar = formulario.cleaned_data['avatar']
+            
+            usuario.save()
             
             formulario.save()
             
             return redirect('inicio')
     else:
-        formulario = FormularioEdicionPerfil(instance=request.user)
+        formulario = FormularioEdicionPerfil(initial={'avatar':usuario.avatar},instance=request.user)
 
     return render(request, 'usuarios/editar_perfil.html', {'formulario':formulario})
