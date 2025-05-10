@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<div class="card mx-auto" style="max-width: 500px;">
+    <div class="card-body text-center">
+        {% if perfil.avatar %}
+            <img src="{{ perfil.avatar.url }}" class="rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;" alt="Avatar">
+        {% endif %}
+        
+        <h4>{{ request.user.first_name }} {{ request.user.last_name }}</h4>
+        <p class="text-muted">@{{ request.user.username }}</p>
+        <p>{{ request.user.email }}</p>
+
+        {% if perfil.fecha_nacimiento %}
+            <p><strong>Fecha de nacimiento:</strong> {{ perfil.fecha_nacimiento|date:"d/m/Y" }}</p>
+        {% endif %}
+
+        {% if perfil.sede_asignada %}
+            <p><strong>Sede asignada:</strong> {{ perfil.sede_asignada }}</p>
+        {% endif %}
+
+        <a href="{% url 'editar_perfil' %}" class="btn btn-primary mt-3">Editar Perfil</a>
+    </div>
+</div>
+{% endblock contenido %}

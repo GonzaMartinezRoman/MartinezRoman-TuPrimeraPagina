@@ -33,7 +33,7 @@
                         {% if request.user.usuario.avatar %}
                             <img src="{{ request.user.usuario.avatar.url }}" alt="Avatar" class="rounded-circle me-2" style="width: 32px; height: 32px; object-fit: cover;">
                         {% endif %}
-                        <a class="nav-link text-warning fw-bold" href="{% url 'editar_perfil' %}">{{ request.user.username }}</a>
+                        <a class="nav-link text-warning fw-bold" href="{% url 'ver_perfil' %}">{{ request.user.username }}</a>
                     </li>
                         <li class="nav-item d-flex align-items-center">
                             <form method="post" action="{% url 'logout' %}">

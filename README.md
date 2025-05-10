@@ -36,7 +36,7 @@ media
 
 Estos ultimos son por el hecho de no compartir la info de tu bd y, aparte, las imagenes son archivos muy pesados que no es recomendable tenerlos en el repo. En cambio, las imagenes que sean parte del codigo del proyecto deberian guardarse en la carpeta static.
 
-- [ ] Existencia del archivo requirements.txt actualizado.
+- [x] Existencia del archivo requirements.txt actualizado.
 - [ ] Tener en cuenta al manejar forms con imagenes hay que adaptar el template, y la vista...no solo el modelo y el formulario.
 - [x] Uso de minimo 2 clases basadas en vista.
 - [x] Uso de minimo un mixin en una CBV y un decorador en una view comun.
@@ -45,7 +45,7 @@ Estos ultimos son por el hecho de no compartir la info de tu bd y, aparte, las i
 - [x] Acceso a una vista "Acerca de mi"/"About"
 - [ ] Crear un modelo principal que contenga los siguiente campos como minimo: 3 Charfield  (o 2 Charfield y un Integerfield), 1 campo de imagen, 1 de fecha
 - [x] Vista de listado de los objetos del modelo principal (modelo a eleccion). En la cual cada objeto mostrara solo alguno de sus datos
-- [ ] Mensaje que de aviso en caso de no haber ningun objeto creado o al utilizar el buscador no encontrar tampoco algun objeto
+- [x] Mensaje que de aviso en caso de no haber ningun objeto creado o al utilizar el buscador no encontrar tampoco algun objeto
 - [x] Desde el listado:
     1. poder acceder a una vista que muestre el detalle de el objeto seleccionado
     2. poder acceder a una vista de creacion, una de edicion y una de borrado de los objetos del listado
@@ -53,10 +53,10 @@ Estos ultimos son por el hecho de no compartir la info de tu bd y, aparte, las i
 - [x] Registrar en el apartado de admin todos los modelos creados
 - [x] Tener una app para el manejo de todas las vistas relacionadas al usuario/autenticacion
 - [x] Desarrollar las vistas para un login, un logout y el registro de un usuario al cual se le solicite: username, email, password
-- [ ] [va por su cuenta] Crear una vista de perfil donde se muestren los datos del usuario:
+- [x] [va por su cuenta] Crear una vista de perfil donde se muestren los datos del usuario:
   - nombre
   - apellido
   - email
   - avatar
   - [va por su cuenta] Campo a eleccion (biografia, fecha de nacimiento, gustos, hobbies, etc)
-- [ ] Desde el perfil, crear un acceso a una vista de edicion de estos datos.
+- [x] Desde el perfil, crear un acceso a una vista de edicion de estos datos.
