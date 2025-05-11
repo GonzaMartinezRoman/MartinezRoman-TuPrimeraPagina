@@ -7,3 +7,4 @@ class RegistrarCliente(forms.Form):
     edad = forms.CharField(label='Edad', max_length=3)
     fecha_de_nacimiento = forms.DateField(label='Fecha de Nacimiento', widget=forms.DateInput(attrs={'type': 'date'}))  
     sede_inscripcion = forms.CharField(label='Sede de Inscripción', max_length=100)
+    foto_carnet = forms.ImageField(label='Foto Carnet', required=False, widget=forms.ClearableFileInput(attrs={'accept': 'image/*'}))

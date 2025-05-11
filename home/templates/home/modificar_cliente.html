@@ -8,9 +8,16 @@
         <h1 class="h4 mb-0">Modificar: {{ cliente }}</h1>
     </div>
     <div class="card-body">
-        <form action="{% url 'modificar_cliente' cliente.id %}" method="post">
+        <form action="{% url 'modificar_cliente' cliente.id %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
+        
+            {% if cliente.foto_carnet %}
+                <p><strong>Foto actual:</strong><br>
+                    <img src="{{ cliente.foto_carnet.url }}" alt="Foto carnet" width="150" class="img-thumbnail mt-2">
+                </p>
+            {% endif %}
+        
             <div class="mt-3">
                 <button type="submit" class="btn btn-warning">Guardar Cambios</button>
                 <a href="{% url 'listado_de_clientes' %}" class="btn btn-secondary">Cancelar</a>

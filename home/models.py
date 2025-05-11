@@ -8,6 +8,7 @@ class Cliente(models.Model):
     edad = models.IntegerField(max_length=3)
     fecha_de_nacimiento = models.DateField(null=True)
     sede_inscripcion = models.CharField(max_length=100)
+    foto_carnet = models.ImageField(upload_to='fotos_carnet/', null=True, blank=True)
 
     def __str__(self):
         return f'{self.apellido}, {self.nombre}'
