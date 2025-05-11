@@ -40,10 +40,10 @@ Estos ultimos son por el hecho de no compartir la info de tu bd y, aparte, las i
 - [x] Tener en cuenta al manejar forms con imagenes hay que adaptar el template, y la vista...no solo el modelo y el formulario.
 - [x] Uso de minimo 2 clases basadas en vista.
 - [x] Uso de minimo un mixin en una CBV y un decorador en una view comun.
-- [ ] Hacer uso de Estaticos (carpeta static con la carga de templates desde bootstrap)
+- [x] Hacer uso de Estaticos (carpeta static con la carga de templates desde bootstrap)
 - [x] Una vista de inicio
 - [x] Acceso a una vista "Acerca de mi"/"About"
-- [ ] Crear un modelo principal que contenga los siguiente campos como minimo: 3 Charfield  (o 2 Charfield y un Integerfield), 1 campo de imagen, 1 de fecha
+- [x] Crear un modelo principal que contenga los siguiente campos como minimo: 3 Charfield  (o 2 Charfield y un Integerfield), 1 campo de imagen, 1 de fecha
 - [x] Vista de listado de los objetos del modelo principal (modelo a eleccion). En la cual cada objeto mostrara solo alguno de sus datos
 - [x] Mensaje que de aviso en caso de no haber ningun objeto creado o al utilizar el buscador no encontrar tampoco algun objeto
 - [x] Desde el listado:
