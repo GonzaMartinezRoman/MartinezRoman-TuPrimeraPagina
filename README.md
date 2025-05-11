@@ -37,7 +37,7 @@ media
 Estos ultimos son por el hecho de no compartir la info de tu bd y, aparte, las imagenes son archivos muy pesados que no es recomendable tenerlos en el repo. En cambio, las imagenes que sean parte del codigo del proyecto deberian guardarse en la carpeta static.
 
 - [x] Existencia del archivo requirements.txt actualizado.
-- [ ] Tener en cuenta al manejar forms con imagenes hay que adaptar el template, y la vista...no solo el modelo y el formulario.
+- [x] Tener en cuenta al manejar forms con imagenes hay que adaptar el template, y la vista...no solo el modelo y el formulario.
 - [x] Uso de minimo 2 clases basadas en vista.
 - [x] Uso de minimo un mixin en una CBV y un decorador en una view comun.
 - [ ] Hacer uso de Estaticos (carpeta static con la carga de templates desde bootstrap)
@@ -49,7 +49,7 @@ Estos ultimos son por el hecho de no compartir la info de tu bd y, aparte, las i
 - [x] Desde el listado:
     1. poder acceder a una vista que muestre el detalle de el objeto seleccionado
     2. poder acceder a una vista de creacion, una de edicion y una de borrado de los objetos del listado
-- [ ] [va por su cuenta] Acomodar el modelo para que maneje un campo de imagen y todas las pantallas relacionadas al modelo lo tengan en cuenta a este nuevo campo.
+- [x] [va por su cuenta] Acomodar el modelo para que maneje un campo de imagen y todas las pantallas relacionadas al modelo lo tengan en cuenta a este nuevo campo.
 - [x] Registrar en el apartado de admin todos los modelos creados
 - [x] Tener una app para el manejo de todas las vistas relacionadas al usuario/autenticacion
 - [x] Desarrollar las vistas para un login, un logout y el registro de un usuario al cual se le solicite: username, email, password

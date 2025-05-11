@@ -37,7 +37,7 @@ def crear_cliente(request):
 
     return render(request, 'home/crear_cliente.html', {'formulario': formulario})
 
-# @login_required Lo comento a propósito para ques se pueda acceder a la vista sin estar loggeado. Para todas las acciones sobre la base de clientes (ver ficha, modificar, elminar) se requiere estar loggeado.
+@login_required
 def listado_de_clientes(request):
     clientes = Cliente.objects.all()
     return render(request, 'home/listado_de_clientes.html', {'clientes':clientes})
@@ -51,7 +51,9 @@ class ModificarCliente(LoginRequiredMixin, UpdateView):
     model = Cliente
     template_name = 'home/modificar_cliente.html'
     fields = ['nombre', 'apellido', 'email', 'edad', 'fecha_de_nacimiento', 'sede_inscripcion', 'foto_carnet']
-    success_url = reverse_lazy('listado_de_clientes')
+
+    def get_success_url(self):
+        return reverse_lazy('detalles_cliente', kwargs={'pk': self.object.pk})
 
 class EliminarCliente(LoginRequiredMixin, DeleteView):
     model = Cliente
