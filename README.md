@@ -10,12 +10,20 @@ Descripción:
 - Una vista "Registrar Cliente" a través de la cual se carga la información de un nuevo cliente y se almacena en la base de datos, 
 - Una vista "Lista de Clientes" donde pueden verse todos los clientes registrados en la base de datos, acceder a la ficha de cada cliente (vista de detalle) y modificar o elilimar un determinado cliente.
 
+## 🎥 Demostración en video
+
+Podés ver una demostración del proyecto en YouTube en el siguiente enlace:
+[![Demo en YouTube](https://img.youtube.com/vi/vaId5IXQRPc/hqdefault.jpg)](https://www.youtube.com/watch?v=vaId5IXQRPc)
+
+---
 Admin: gonzalomartinezroman / @$1234
+
 usuarios: 
+
 usuario_de_prueba_1 / @$123456
+
 Gonza / @$GMR1986
 
-quedé en ultima clase 2:53:05
 ---
 # Puntos para la entrega final
 
