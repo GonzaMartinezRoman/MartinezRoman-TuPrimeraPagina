@@ -22,7 +22,7 @@ quedé en ultima clase 2:53:05
 - [x] Entrega individual
 - [x] subir a github
 - [x] readme como la entrega 3
-- [ ] video de maximo 10 min que muestre la pagina y sus funcionalidades (con o sin audio)
+- [x] video de maximo 10 min que muestre la pagina y sus funcionalidades (con o sin audio)
   - programas que pueden utilizar freecam8, obs, filmora 12, etc.
 - [x] No agregar la Base de datos (el archivo db.sqlite3) en la entrega. Deberia estar en el .gitignore
 - [x] Uso de herencia de templates
