@@ -12,6 +12,8 @@ Descripción:
 
 ## 🎥 Demostración en video
 
+ACTIVAR LOS SUBTITULOS PARA VER LA EXPLICACIÓN!!!!
+
 Podés ver una demostración del proyecto en YouTube en el siguiente enlace:
 [![Demo en YouTube](https://img.youtube.com/vi/vaId5IXQRPc/hqdefault.jpg)](https://www.youtube.com/watch?v=vaId5IXQRPc)
 
